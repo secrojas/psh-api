@@ -18,7 +18,7 @@ exports.nuevoStat = async (req, res, next) => {
 /** Obtiene todos los stats */
 exports.obtenerStats = async (req, res, next) => {
     try {
-        const stats = await Stat.find({}).sort({fecha:-1});
+        const stats = await Stat.find({}).sort({score:-1});
         res.json(stats);
     } catch (error) {
         console.log(error);
